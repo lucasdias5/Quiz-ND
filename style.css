@@ -9,6 +9,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+     background: linear-gradient(rgb(168, 12, 12), rgb(32, 32, 255)); 
 }
 
 .perguntas {
