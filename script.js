@@ -16,7 +16,18 @@ document.querySelector('.quiz').addEventListener('click', function (e) {
     if (!e.target.classList.contains('alternativas')) return;
     
     const numeroPergunta = e.target.id.split('_')[0];
+    const idCorreto = respostasCorretas[numeroPergunta];
 
-    console.log(numeroPergunta)
+    const perguntas = e.target.closest('.perguntas');
+    const btnAlternativas = perguntas.querySelectorAll('.alternativas');
+
+    btnAlternativas.forEach(botao => {
+        if (botao.id === idCorreto) {
+            botao.classList.add('correta')
+        } else {
+            botao.classList.add('incorreta')
+        }
+
+    });
 
 })

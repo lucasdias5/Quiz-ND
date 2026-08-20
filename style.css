@@ -60,9 +60,18 @@ img {
     padding: 20px;
     border: solid gray;
     transition: transform 0.2s ease;
+    transition: 0.3s;
     
 }
 
 .alternativas:hover {
     transform: scale(1.08);
+}
+
+.correta {
+    background-color: rgb(53, 221, 76);
+}
+
+.incorreta {
+    background-color: rgb(179, 1, 1);
 }
