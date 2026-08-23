@@ -1,3 +1,8 @@
+let contador = 0
+
+let resultado = document.getElementById('resultado');
+let mensagem = document.getElementById('mensagem')
+
 const respostasCorretas = {
     1: "1_alt-2",
     2: "2_alt-2",
@@ -11,6 +16,7 @@ const respostasCorretas = {
     10: "10_alt-4"
 }
 
+
 document.querySelector('.quiz').addEventListener('click', function (e) {
     
     if (!e.target.classList.contains('alternativas')) return;
@@ -21,13 +27,33 @@ document.querySelector('.quiz').addEventListener('click', function (e) {
     const perguntas = e.target.closest('.perguntas');
     const btnAlternativas = perguntas.querySelectorAll('.alternativas');
 
+    
     btnAlternativas.forEach(botao => {
         if (botao.id === idCorreto) {
             botao.classList.add('correta')
         } else {
             botao.classList.add('incorreta')
         }
-
+        
     });
+    
+    if (e.target.id === idCorreto) {
+        contador++
+    }
 
+    if (contador <= 3) {
+        mensagem.textContent = 'Por que você está aqui?'
+    } else if (contador > 3 && contador <= 5) {
+        mensagem.textContent = 'Meio larper'
+    } else if (contador > 5 && contador <= 7) {
+        mensagem.textContent = 'Ok, você sabe bem até'
+    } else if (contador > 7 && contador <= 9){
+        mensagem.textContent = 'True Star Wars Fan'
+    } else if (contador == 10) {
+        mensagem.textContent = 'You are The Chosen One'
+    }
+
+
+    resultado.textContent = `Resultado: ${contador}/10`
 })
+
