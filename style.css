@@ -105,7 +105,14 @@ img {
     height: auto;
     padding: 50px 20px;
 }
+<<<<<<< HEAD
 
+=======
+    
+.alternativas:disabled {
+    color: black;
+}
+>>>>>>> f735060ec6194289659f02e68cc79559b520bf01
 
    
 

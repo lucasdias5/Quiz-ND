@@ -1,5 +1,3 @@
-const perguntaFinal = document.getElementById('perguntaFinal');
-
 let contador = 0
 
 let resultado = document.getElementById('resultado');
@@ -31,25 +29,25 @@ document.querySelector('.quiz').addEventListener('click', function (e) {
 
     
     btnAlternativas.forEach(botao => {
+        botao.disabled = true
         if (botao.id === idCorreto) {
             botao.classList.add('correta')
         } else {
             botao.classList.add('incorreta')
         }
-        
     });
     
     
     if (e.target.id === idCorreto) {
         contador++
-    }
-})
 
-perguntaFinal.addEventListener('click', function(){
+    }
+
+    resultado.textContent = `Resultado: ${contador}/10`
     
-    if (contador <= 3) {
+    if (contador <= 3)  {
         mensagem.textContent = 'Por que você está aqui?'
-    } else if (contador > 3 && contador <= 5) {
+    } else if (contador > 3 && contador <= 5) { 
         mensagem.textContent = 'Meio larper'
     } else if (contador > 5 && contador <= 7) {
         mensagem.textContent = 'Ok, você sabe bem até'
@@ -58,7 +56,4 @@ perguntaFinal.addEventListener('click', function(){
     } else if (contador == 10) {
         mensagem.textContent = 'You are The Chosen One'
     }
-    
-    
-    resultado.textContent = `Resultado: ${contador}/10`
 })
