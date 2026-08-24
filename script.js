@@ -1,3 +1,5 @@
+const perguntaFinal = document.getElementById('perguntaFinal');
+
 let contador = 0
 
 let resultado = document.getElementById('resultado');
@@ -37,10 +39,14 @@ document.querySelector('.quiz').addEventListener('click', function (e) {
         
     });
     
+    
     if (e.target.id === idCorreto) {
         contador++
     }
+})
 
+perguntaFinal.addEventListener('click', function(){
+    
     if (contador <= 3) {
         mensagem.textContent = 'Por que você está aqui?'
     } else if (contador > 3 && contador <= 5) {
@@ -52,8 +58,7 @@ document.querySelector('.quiz').addEventListener('click', function (e) {
     } else if (contador == 10) {
         mensagem.textContent = 'You are The Chosen One'
     }
-
-
+    
+    
     resultado.textContent = `Resultado: ${contador}/10`
 })
-
