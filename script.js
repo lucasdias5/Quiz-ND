@@ -29,17 +29,18 @@ document.querySelector('.quiz').addEventListener('click', function (e) {
 
     
     btnAlternativas.forEach(botao => {
+        botao.disabled = true
         if (botao.id === idCorreto) {
             botao.classList.add('correta')
         } else {
             botao.classList.add('incorreta')
         }
-        
     });
     
     
     if (e.target.id === idCorreto) {
         contador++
+
     }
 
     resultado.textContent = `Resultado: ${contador}/10`
