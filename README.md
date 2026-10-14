@@ -1,6 +1,14 @@
-Esse é um Quiz de Star Wars.
+# Quiz Star Wars ☬ 𖥔 ˖ִ🛸
 
-Usamos HTMl e CSS para estilizar.
-JavaScript para a interação e lógica.
+Este repositório contém um quiz relacionado ao filmes da saga **Star Wars**.
 
-Link: https://lucasdias5.github.io/Quiz-ND/
+## Linguagens Utilizadas
+
+- **HTML :** Estruturação e organização dos elementos da página
+- **CSS :** Estilização da página
+- **JavaScript :** Funcionalidades e eventos da página
+
+## Colaboradores
+
+- **Lucas Dias**
+- **Fernanda Kandini**
